@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Shop electronics, laptops, mobiles, beauty products, toys and more. Best deals on Lenovo, Asus, Samsung, Acer and top brands.">
+    <title>ShopVerse — Premium Online Shopping</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-spinner"></div>
+            <p>ShopVerse</p>
+        </div>
+    </div>
+
     <header>
-        <div class="navbar">   
+        <nav class="navbar" id="navbar">
             <div class="nav-logo border">
                 <div class="logo"></div>
             </div>
@@ -24,17 +35,21 @@
             </div>
 
             <div class="nav-search">
-                <select class="search-select">
+                <select class="search-select" aria-label="Search category">
                     <option>All</option>
-                </selec>
-                <input placeholder="Search Amazon"class="search-input">
+                    <option>Electronics</option>
+                    <option>Laptops</option>
+                    <option>Mobiles</option>
+                    <option>Toys</option>
+                </select>
+                <input placeholder="Search ShopVerse" class="search-input" aria-label="Search products">
                 <div class="search-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div> 
+                </div>
             </div>
 
             <div class="nav-singin border">
-                <p><span>Hell0, singn in</span></p>
+                <p><span>Hello, sign in</span></p>
                 <p class="nav-second">Account & Lists</p>
             </div>
 
@@ -47,156 +62,217 @@
                 <i class="fa-solid fa-cart-shopping"></i>
                 Cart
             </div>
-        </div>
+        </nav>
 
         <div class="panel">
-                <div class="panel-all">
-                    <i class="fa-solid fa-bars"></i>
-                    All
-                </div>
-                <div class="panel-ops">
-                    <p>Today's Deals</p>
-                    <p>Customer Service</p>
-                    <p>Registry</p>
-                    <p>Gift Cards</p>
-                    <p>Sell</p>
-
-                </div>
-                <div class="panel-deals">
-                    Shop deals in Electronics
-                </div>
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
             </div>
+            <div class="panel-ops">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+            <a href="../Gameing-Web/gameing.html" class="panel-gaming-link" title="Visit Zentry Gaming Zone">
+                <i class="fa-solid fa-gamepad"></i> Gaming Zone
+            </a>
+            <a href="../Music-Web/index.html" class="panel-music-link" title="Listen on SoundWave">
+                <i class="fa-solid fa-headphones"></i> Music
+            </a>
+            <a href="../Movie-Website/index.html" class="panel-movie-link" title="Watch on MDVD">
+                <i class="fa-solid fa-film"></i> Movies
+            </a>
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+        </div>
     </header>
 
-    <div class="hero-section">
-        <div class="hero-msg">
-            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.<a>Click here to go to amazon.in</a></p>
-        </div>
-    </div>
+    <main>
+        <section class="hero-section">
+            <div class="hero-msg">
+                <p>You are on ShopVerse. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+            </div>
+        </section>
 
-    
-    <div class="shop-section">
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Lenovo LOQ i5hxCPU 4050GPU</h2>
-                <div class="box-img" style="background-image: url('box10_image.jpg');"></div>
-                <p>See more</p>
+        <section class="shop-section">
+            <div class="box" id="product-1">
+                <div class="box-content">
+                    <h2>Lenovo LOQ i5 HX CPU 4050 GPU</h2>
+                    <div class="box-img" style="background-image: url('box10_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box2 box"><div class="box-content">
-                <h2>Acer Predator</h2>
-                <div class="box-img" style="background-image: url('box11_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-2">
+                <div class="box-content">
+                    <h2>Acer Predator</h2>
+                    <div class="box-img" style="background-image: url('box11_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box3 box"><div class="box-content">
-                <h2>Mobile</h2>
-                <div class="box-img" style="background-image: url('box12_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-3">
+                <div class="box-content">
+                    <h2>Mobile</h2>
+                    <div class="box-img" style="background-image: url('box12_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box4 box"><div class="box-content">
-                <h2>Samsunag S25 Uletra</h2>
-                <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-4">
+                <div class="box-content">
+                    <h2>Samsung S25 Ultra</h2>
+                    <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Beauty picks</h2>
-                <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-5">
+                <div class="box-content">
+                    <h2>Beauty Picks</h2>
+                    <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box2 box"><div class="box-content">
-                <h2>Pet Care</h2>
-                <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-6">
+                <div class="box-content">
+                    <h2>Pet Care</h2>
+                    <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box3 box"><div class="box-content">
-                <h2>New Arrival in Toys</h2>
-                <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-7">
+                <div class="box-content">
+                    <h2>New Arrival in Toys</h2>
+                    <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box4 box"><div class="box-content">
-                <h2>Animes Toys</h2>
-                <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-8">
+                <div class="box-content">
+                    <h2>Anime Toys</h2>
+                    <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Asus ROG strix 18 </h2>
-                <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-9">
+                <div class="box-content">
+                    <h2>Asus ROG Strix 18</h2>
+                    <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box2 box"><div class="box-content">
-                <h2>Elecronics</h2>
-                <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-10">
+                <div class="box-content">
+                    <h2>Electronics</h2>
+                    <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>
-        <div class="box3 box"><div class="box-content">
-                <h2>Furnityre</h2>
-                <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
-                <p>See more</p>
+            <div class="box" id="product-11">
+                <div class="box-content">
+                    <h2>Furniture</h2>
+                    <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
             </div>
-        </div>        
-    </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="foot-panell">
-            black to Top
+        <div class="foot-panel1" id="back-to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+            <span>Back to Top</span>
         </div>
         <div class="foot-panel2">
-                <u>
-                    <p>Get To Know Us<p></p>
-                    <a>Careers</a>Careers
-                    <a>Blog</a>
-                    <a>About Amazon.in</a> 
-                    <a>Investor Relation</a>
-                    <a>Amazon Science</a>
-                </u>
-                <u>
-                    <p>Get To Know Us<p></p>
-                    <a>Careers</a>Careers
-                    <a>Blog</a>
-                    <a>About Amazon.in</a> 
-                    <a>Investor Relation</a>
-                    <a>Amazon Science</a>
-                </u>
-                <u>
-                    <p>Get To Know Us<p></p>
-                    <a>Careers</a>Careers
-                    <a>Blog</a>
-                    <a>About Amazon.in</a> 
-                    <a>Investor Relation</a>
-                    <a>Amazon Science</a>
-                </u>
-                <u>
-                    <p> Get To Know Us</p>
-                    <a> Careers </a>
-                    <a> Blog </a>
-                    <a> About Amazon.in </a> 
-                    <a> Investor Relation </a>
-                    <a> Amazon Science </a>
-                </u>
-            <div class="foot-panel3">
-                <div class="logo"></div>
+            <div class="foot-links">
+                <ul>
+                    <p class="foot-heading">Get To Know Us</p>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon.in</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+                <ul>
+                    <p class="foot-heading">Make Money With Us</p>
+                    <li><a href="#">Sell on Amazon</a></li>
+                    <li><a href="#">Sell under Brand</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Fulfilment by Amazon</a></li>
+                    <li><a href="#">Advertise Products</a></li>
+                </ul>
+                <ul>
+                    <p class="foot-heading">Let Us Help You</p>
+                    <li><a href="#">COVID-19 and Amazon</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Returns Centre</a></li>
+                    <li><a href="#">100% Purchase Protection</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <ul>
+                    <p class="foot-heading">Connect With Us</p>
+                    <li><a href="../Gameing-Web/gameing.html"><i class="fa-solid fa-gamepad"></i> Gaming Zone</a></li>
+                    <li><a href="../Music-Web/index.html"><i class="fa-solid fa-headphones"></i> SoundWave Music</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
             </div>
-            <div class="foot-panel4">
-                <div class="pages">
-                    <a>Condition Of Use</a>
-                    <a>Privacy Notice</a>
-                    <a>Your Ads Privacy Choices</a>
-                </div>
-                <div class="copyright">
-                    # 2025/07/19 Amazon.in or its Affiliates
-                </div>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2025 ShopVerse or its Affiliates
             </div>
         </div>
     </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('fade-out');
+            setTimeout(() => preloader.style.display = 'none', 600);
+        });
+
+        // Back to Top
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll-triggered card animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.box').forEach(box => {
+            box.classList.add('animate-ready');
+            observer.observe(box);
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
